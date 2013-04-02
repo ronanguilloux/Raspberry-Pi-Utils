@@ -67,6 +67,51 @@ int main(int argc, char *argv[])
     exit(1);
   }
 
+  int i;
+  char *command;
+  char *output;
+
+  output = argv[1];
+
+  for (i = 1; i < argc; i++) {
+
+      /* Check for a switch (leading "-"). */
+      if (argv[i][0] == '-') {
+
+          /* Use the next character to decide what to do. */
+          switch (argv[i][1]) {
+
+              case 'i':   //a_value = atoi(argv[++i]);
+                  command = "hostname -I";
+                  output = getCommandLineOutput(command);
+                  break;
+
+              // Help
+              case 'h':
+                  printf("usage: pcd8544_cli [options] <text to display>\n");
+                  printf("Available options:\n");
+                  printf("\t-h: show this help on usage & options\n");
+                  printf("\t-i: show IP address\n");
+                  printf("\t-d: show datetime\n");
+                  output = "";
+                  break;
+
+              case 'c':   //c_value = argv[++i];
+                          break;
+
+              case 'd':
+                  command = "date";
+                  output = getCommandLineOutput(command);
+                  break;
+
+              default:
+                  printf("pcd8544_cli: invalid option\n");
+                  printf("Type « sudo ./pcd8544_cli -h » for more informations\n");
+                  output = "";
+
+          }
+      }
+  }
 
   // check wiringPi setup
   if (wiringPiSetup() == -1)
@@ -87,7 +132,7 @@ int main(int argc, char *argv[])
   }
 
   // build screen
-  LCDdrawstring(0, 0, argv[1]);
+  LCDdrawstring(0, 0, output);
   LCDdisplay();
 
   return 0;

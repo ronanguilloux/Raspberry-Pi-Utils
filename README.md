@@ -30,11 +30,41 @@ Since gcc is installed on Raspberry Pi images, you can easily build them:
 $ cc -o pcd8544_cli pcd8544_cli.c PCD8544.c  -L/usr/local/lib -lwiringPi
 ```
 
-To run it:
+Usage:
 
 ``` bash
-$ sudo ./pcd8544_cli
+pcd8544_cli [options] <text to display>
 ```
+
+Available options:
+* -h: show this help on usage & options
+* -i: show IP address
+* -d: show datetime
+
+Print help informations in the terminal (will reset the display)
+
+``` bash
+$ sudo ./pcd8544_cli -h
+```
+
+Example 1: Print "Foooooooooooooooooooooooooo" on the display:
+
+``` bash
+$ sudo ./pcd8544_cli "Foooooooooooooooooooooooooo"
+```
+
+Example 2: Print current IP address on the display:
+
+``` bash
+$ sudo ./pcd8544_cli -i
+```
+
+Example 3: Print current datetime on the display:
+
+``` bash
+$ sudo ./pcd8544_cli -d
+```
+
 
 Copyrights
 ----------

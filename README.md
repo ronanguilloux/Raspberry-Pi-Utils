@@ -24,14 +24,14 @@ Usage
 The PCD8544 file is a library, the pcd8544_cli is a cli-tool example, to be extended by you.
 Since gcc is installed on Raspberry Pi images, you can easily build them:
 
-``` c
-    cc -o pcd8544_cli pcd8544_cli.c PCD8544.c  -L/usr/local/lib -lwiringPi
+``` bash
+$ cc -o pcd8544_cli pcd8544_cli.c PCD8544.c  -L/usr/local/lib -lwiringPi
 ```
 
 To run it:
 
-``` c
-    sudo ./pcd8544_cli
+``` bash
+$ sudo ./pcd8544_cli
 ```
 
 Copyrights

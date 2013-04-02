@@ -7,7 +7,7 @@ Raspi related LIbrairies &amp; tools
 
 You can found a copy of this software here: https://github.com/ronanguilloux/Raspberry-Pi-Utils
 
-![Circuit](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/circuit.jpg)
+![Circuit](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/circuit.png)
 
 ![Schema](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/schema.jpg)
 

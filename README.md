@@ -10,10 +10,6 @@ Raspberry Pi PCD8544 Library
 
 A simple PCD8544 LCD (Nokia3310/5110) driver. Target board is Raspberry Pi. This driver uses 5 GPIOs on target board with a bit-bang SPI implementation (hence, may not be as fast but seems fast enough). The pcd8544_cli tool, to be compiled, allow you to display messages freely on the display. Makes use of WiringPI-library of _Gordon Henderson_ (https://projects.drogon.net/raspberry-pi/wiringpi/)
 
-Copyright (C) 2010 _Limor Fried_, _Adafruit Industries_
-CORTEX-M3 version by _Le Dang Dung_, 2011 LeeDangDung@gmail.com (tested on LPC1769)
-Raspberry Pi version: initiated by Andre Wussow, 2012, desk@binerry.de, hacked here by Ronan Guilloux, 2013, https://github.com/ronanguilloux/Raspberry-Pi-Utils
-
 ![Circuit](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/circuit.png)
 
 ![Schema](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/schema.jpg)

@@ -862,7 +862,7 @@ char *getIPAddress()
     //char ipInfo[16];
     struct hostent* Host;
     gethostname ( ipBuf , 200 ) ;
-    Host = ( struct hostent * ) gethostbyname ( ipBuf ) ;
+    Host = gethostbyname ( ipBuf ) ;
     buf = inet_ntoa(*((struct in_addr *)Host->h_addr));
     //printf("IP Address : %s\n", ipAddr);
     //sprintf(ipInfo, "IP %s", ipAddr);
@@ -870,19 +870,20 @@ char *getIPAddress()
     return buf;
 }
 
-char *getCommandLineOutput(char *command)
+/*
+ * must reserve 255 char for result
+ * return result
+ */
+void getCommandLineOutput(char *ai_command, char *ao_result)
 {
   FILE *pf;
-  static char result[255];
-  pf = popen(command,"r");
+  pf = popen(ai_command,"r");
   if(!pf) {
-      sprintf(result, "Error opening pipe: %s\n", stderr);
+      sprintf(ao_result, "Error opening pipe: %s\n", stderr);
   }
-  fgets(result, 255 , pf);
+  fgets(ao_result, 255 , pf);
   if (pclose(pf) == -1) {
-      sprintf(result," Error: %s\n", stderr);
+      sprintf(ao_result," Error: %s\n", stderr);
   }
-
-  return result;
 };
 

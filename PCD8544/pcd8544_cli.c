@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
   int i;
   char *command;
   char *output;
+  char result[255];
 
   output = argv[1];
 
@@ -83,7 +84,7 @@ int main(int argc, char *argv[])
 
               case 'i':   //a_value = atoi(argv[++i]);
                   command = "hostname -I";
-                  output = getCommandLineOutput(command);
+                  output = getCommandLineOutput(command, result);
                   break;
 
               // Help

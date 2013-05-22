@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 
               case 'i':   //a_value = atoi(argv[++i]);
                   command = "hostname -I";
-                  output = getCommandLineOutput(command, result);
+                  getCommandLineOutput(command, result);
                   break;
 
               // Help
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 
               case 'd':
                   command = "date";
-                  output = getCommandLineOutput(command);
+                  getCommandLineOutput(command, result);
                   break;
 
               default:

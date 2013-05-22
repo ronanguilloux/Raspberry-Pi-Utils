@@ -125,6 +125,8 @@ int main (void)
 	  LCDdrawstring(0, 36, ipInfo);
 	  LCDdisplay();
 
+      //LCDsetContrast(0);
+
 	  delay(10000);
   }
 

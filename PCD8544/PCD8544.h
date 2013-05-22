@@ -87,4 +87,4 @@ Lesser General Public License for more details.
  void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val);
  void _delay_ms(uint32_t t);
  char *getIPAddress();
- char *getCommandLineOutput(char *command);
+ void getCommandLineOutput(char *ai_command, char *ao_result);

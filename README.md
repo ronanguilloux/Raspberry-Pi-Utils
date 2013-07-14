@@ -12,7 +12,7 @@ A simple PCD8544 LCD (Nokia3310/5110) driver. Target board is Raspberry Pi. This
 
 ![Circuit](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/circuit.png)
 
-![Schema](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/schema.jpg)
+![Schema](https://raw.github.com/ronanguilloux/Raspberry-Pi-Utils/master/PCD8544/resources/images/setup.jpg)
 
 Image source & inspiration: http://binerry.de/post/25787954149/pcd8544-library-for-raspberry-pi
 
